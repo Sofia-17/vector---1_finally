@@ -62,6 +62,11 @@ Fraction Fraction::operator*( const Fraction& src ) const{
    
 }
 
+bool operator== (const Fraction &c1, const Fraction &c2){    // оператор сравнения дробей(исп. в автотесте)
+
+    return (c1.p == c2.p) && (c1.q == c2.q);
+}
+
 std::ostream& operator<<(std::ostream& output, const Fraction& f) {
     output << "(" << f.p << "/";
     output << f.q << ")" ;
